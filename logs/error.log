@@ -1,0 +1,65 @@
+[2023-09-14 16:34:14 +0800] [59084] [INFO] Starting gunicorn 20.1.0
+[2023-09-14 16:34:14 +0800] [59084] [INFO] Listening at: unix:./gunicorn.sock (59084)
+[2023-09-14 16:34:14 +0800] [59084] [INFO] Using worker: gevent
+[2023-09-14 16:34:14 +0800] [59141] [INFO] Booting worker with pid: 59141
+[2023-09-14 16:34:14 +0800] [59142] [INFO] Booting worker with pid: 59142
+[2023-09-14 16:34:15 +0800] [59143] [INFO] Booting worker with pid: 59143
+[2023-09-14 16:34:15 +0800] [59144] [INFO] Booting worker with pid: 59144
+[2023-09-14 16:34:15 +0800] [59145] [INFO] Booting worker with pid: 59145
+[2023-09-14 16:34:15 +0800] [59146] [INFO] Booting worker with pid: 59146
+[2023-09-14 16:34:15 +0800] [59147] [INFO] Booting worker with pid: 59147
+[2023-09-14 16:34:15 +0800] [59148] [INFO] Booting worker with pid: 59148
+[2023-09-14 16:34:15 +0800] [59150] [INFO] Booting worker with pid: 59150
+[2023-09-14 16:34:15 +0800] [59152] [INFO] Booting worker with pid: 59152
+[2023-09-14 16:34:15 +0800] [59153] [INFO] Booting worker with pid: 59153
+[2023-09-14 16:34:15 +0800] [59154] [INFO] Booting worker with pid: 59154
+[2023-09-14 16:34:15 +0800] [59155] [INFO] Booting worker with pid: 59155
+[2023-09-14 16:34:15 +0800] [59156] [INFO] Booting worker with pid: 59156
+[2023-09-14 16:34:15 +0800] [59157] [INFO] Booting worker with pid: 59157
+[2023-09-14 16:34:15 +0800] [59158] [INFO] Booting worker with pid: 59158
+[2023-09-14 16:34:15 +0800] [59159] [INFO] Booting worker with pid: 59159
+[2023-09-14 08:34:20 +0000] [59155] [ERROR] Error handling request /completions
+Traceback (most recent call last):
+  File "/Users/zh/.pyenv/versions/3.9.10/lib/python3.9/site-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/Users/zh/.pyenv/versions/3.9.10/lib/python3.9/site-packages/gunicorn/workers/ggevent.py", line 127, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/Users/zh/.pyenv/versions/3.9.10/lib/python3.9/site-packages/gunicorn/workers/base_async.py", line 108, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2023-09-14 16:37:23 +0800] [59084] [INFO] Handling signal: int
+[2023-09-14 08:37:23 +0000] [59154] [INFO] Worker exiting (pid: 59154)
+[2023-09-14 08:37:23 +0000] [59141] [INFO] Worker exiting (pid: 59141)
+[2023-09-14 08:37:23 +0000] [59150] [INFO] Worker exiting (pid: 59150)
+[2023-09-14 08:37:23 +0000] [59157] [INFO] Worker exiting (pid: 59157)
+[2023-09-14 08:37:23 +0000] [59152] [INFO] Worker exiting (pid: 59152)
+[2023-09-14 08:37:23 +0000] [59159] [INFO] Worker exiting (pid: 59159)
+[2023-09-14 08:37:23 +0000] [59146] [INFO] Worker exiting (pid: 59146)
+[2023-09-14 08:37:23 +0000] [59155] [INFO] Worker exiting (pid: 59155)
+[2023-09-14 08:37:23 +0000] [59153] [INFO] Worker exiting (pid: 59153)
+[2023-09-14 08:37:23 +0000] [59145] [INFO] Worker exiting (pid: 59145)
+[2023-09-14 08:37:23 +0000] [59156] [INFO] Worker exiting (pid: 59156)
+[2023-09-14 08:37:23 +0000] [59147] [INFO] Worker exiting (pid: 59147)
+[2023-09-14 08:37:23 +0000] [59148] [INFO] Worker exiting (pid: 59148)
+[2023-09-14 08:37:23 +0000] [59142] [INFO] Worker exiting (pid: 59142)
+[2023-09-14 08:37:23 +0000] [59144] [INFO] Worker exiting (pid: 59144)
+[2023-09-14 08:37:23 +0000] [59143] [INFO] Worker exiting (pid: 59143)
+[2023-09-14 08:37:23 +0000] [59158] [INFO] Worker exiting (pid: 59158)
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59158 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59152 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59150 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59143 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59155 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59153 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59148 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59147 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59145 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59159 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59157 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59154 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59144 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59142 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59146 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59156 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [WARNING] Worker with pid 59141 was terminated due to signal 2
+[2023-09-14 16:37:23 +0800] [59084] [INFO] Shutting down: Master

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myHeaders = new Headers();
+      myHeaders.append("Accept", "application/json");
+      myHeaders.append("Content-Type", "application/json");
+      var raw = JSON.stringify({});
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch("http://127.0.0.1:8000/completions", requestOptions).then(
+        async (response) => {
+          if (!response.body) {
+            return;
+          }
+          const reader = response.body.getReader();
+          while (true) {
+            const { value, done } = await reader.read();
+            const utf8Decoder = new TextDecoder("utf-8");
+            let data = value ? utf8Decoder.decode(value, { stream: true }) : "";
+            console.log(data);
+            try {
+              const l6bData = JSON.parse(data);
+            } catch (e) {
+              console.log(data);
+            }
+            if (done) {
+              break;
+            }
+          }
+        }
+      );
+    </script>
+  </body>
+</html>
